@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="pt-BR">
 
@@ -118,7 +118,7 @@ body {
     position: relative;
     color: brown;
     font: bold 18px helvetica;
-    left: 1cm;
+    left: 2cm;
     top: 0.2cm;
 }
 
@@ -198,7 +198,7 @@ body {
 
         //API DATA REQUEST AND FETCH
         let coronaStats =
-            "https://corona.lmao.ninja/v2/countries/Brazil?yesterday=true&strict=true";
+            "https://api.quarantine.country/api/v1/summary/region?region=brazil";
 
         fetch(coronaStats)
 
@@ -210,7 +210,6 @@ body {
                 console.log(data);
 
                 let CoronaData = data;
-                console.log(CoronaData.cases);
                 usingData(CoronaData);
             })
 
@@ -220,14 +219,21 @@ body {
         function usingData(data) {
 
             let Corona = data;
-            console.log(Corona);
+            console.log(Corona.data.spots);
 
-            setInterval(function () { document.getElementById("totalcases").innerHTML = `${Corona.cases}` }, 4000)
-            setInterval(function () { document.getElementById("activecases").innerHTML = `${Corona.active}` }, 4000)
-            setInterval(function () { document.getElementById("casestoday").innerHTML = `${Corona.todayCases}` }, 4000)
-            setInterval(function () { document.getElementById("totaldeaths").innerHTML = `${Corona.deaths}` }, 4000)
-            setInterval(function () { document.getElementById("todaydeaths").innerHTML = `${Corona.todayDeaths}` }, 4000)
-            setInterval(function () { document.getElementById("recover").innerHTML = `${Corona.recovered}` }, 4000)
+            let coronaUpdates = Object.values(Corona.data.spots) //eu criei um array com os atributos que tem objetos dos dados atualizados e o array aumenta a cada 10 min 
+                let casosTotal = coronaUpdates[0].total_cases;
+                let mortesTotais = coronaUpdates[0].deaths;
+                let recuperados = coronaUpdates[0].recovered;
+            let casosAtivos = Corona.data.summary.active_cases;
+            
+
+            setInterval(function () { document.getElementById("totalcases").innerHTML = `${casosTotal}`}, 1000)
+            setInterval(function () { document.getElementById("activecases").innerHTML = `${casosAtivos}` }, 1000)
+            setInterval(function () { document.getElementById("casestoday").innerHTML = `${Corona.data.change.total_cases}` }, 1000)
+            setInterval(function () { document.getElementById("totaldeaths").innerHTML = `${mortesTotais}` }, 1000)
+            setInterval(function () { document.getElementById("todaydeaths").innerHTML = `${Corona.data.change.deaths}` }, 1000)
+            setInterval(function () { document.getElementById("recover").innerHTML = `${recuperados}` }, 1000)
 
 
         }
@@ -244,7 +250,7 @@ body {
     </div>
 
     <div class="dashboardDivs2">
-        <h3 class="caseTitle3">Caso nas Ultimas 24h:</h3>
+        <h3 class="caseTitle3">Caso de Hoje:</h3>
         <p id="casestoday" class='dataDisplay'></p>
     </div>
 
