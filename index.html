@@ -22,6 +22,7 @@ body {
     width: 20cm;
     height: 3cm;
     left: 380px;
+    top: -0.35cm;
    
 }
 
@@ -140,7 +141,7 @@ body {
 
 .caseTitle6 {
     position: relative;
-    color: brown;
+    color: rgb(165, 42, 42);
     font: bold 18px helvetica;
     left: 0.7cm;
     top: 0.2cm;
@@ -151,6 +152,12 @@ body {
     color: rgb(15, 15, 15);
     left: 3cm;
     font: bold 18px helvetica;
+    
+}
+
+#Chart {
+    background-color: rgba(250, 235, 215, 0.85);
+    border-radius: 10px;
 }
     </style>
 
@@ -162,21 +169,23 @@ body {
         height="45" width="55">  -->
 
     <h4 id="subtitulo2">Dados Coletados da API: <a id="APIRef"
-            href="https://documenter.getpostman.com/view/1294665/SzYdSGX6?version=latest#24be5e32-30c1-4fc4-8c4d-53eee9b1b78a">Coronavirus API
-
-</a></h4>
+            href="https://corona.lmao.ninja/docs/#/Countries/get_v2_countries__query_">NOVELCovid</a></h4>
     <div id="headDiv">
         <p id="time"></p>
-        <h1 id="title1">Dados do Corona Virus no Brasil <h4 id="subtitulo1">Esse site contem informacoes atualizadas
-                a cada 10 min sobre o corona virus no Brasil</h4>
+        <h1 id="title1">Dados do Corona Virus no Brasil <h4 id="subtitulo1">Esse site contem informacoes atualizadas,
+                constantemente, sobre o corona virus no Brasil</h4>
         </h1>
 
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> // importing the Charts libr files </script>
 </head>
 
 <body>
+    <div id="chartDiv">
+    <canvas id="Chart" height="3cm" width="15cm" ></canvas>
+    <script src="script.js"> //js coding </script>
+    </div>
     <script>
 
         window.onload = function givetime() {
