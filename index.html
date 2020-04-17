@@ -1,190 +1,36 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
+<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+
+<header>
+    <nav>
+        <div class="navdiv"><a id="navBrasil" href=" index.html">Brasil</a></div>
+        <div class="navdiv"><a id="navMundo" href="Mundo.html">Mundo</a></div>
+    </nav>
+</header>
 
 <head>
-    <link rel="shortcut icon" type:"image/png" href="https://img.icons8.com/color/48/000000/bacteria.png" >
-    <style>
-        
-        /* Corona virus site styles */
-
-body {
-    background-image: url("https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80");
-    background-position-x: 3cm;
-    background-position-y: 1cm;
-}
-
-#headDiv {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 20cm;
-    height: 3cm;
-    left: 380px;
-    top: -0.35cm;
-   
-}
-
-#title1 {
-    text-align: center;
-    color: brown;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#subtitulo1 {
-    position: relative;
-    text-align: center;
-    color: darkslategray;
-    font-style: italic;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: -0.3cm;
-}
-
-#subtitulo2 {
-    position: relative;
-    color: rgb(245, 245, 245);
-    font-style: italic;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: 0.5cm;
-}
-
-#APIRef:hover {
-    color: mediumpurple;
-}
+    <link rel="shortcut icon" type:"image/png" href="https://img.icons8.com/color/48/000000/bacteria.png">
+    <link rel="stylesheet" type="text/css" href="index.css" />
 
 
-#time {
-    position: relative;
-    text-align: center;
-    color: darkslategray;
-    font: italic bold 15px helvetica;
-    top: 0.6cm;
-}
-
-/*Editing the Data dashboard*/
-
-.dashboardDivs1 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    left: 120px;
-    top: 1cm;
-}
-
-.dashboardDivs2 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: rgb(207, 66, 41);
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    left: 600px;
-    top: -4cm;
-}
-
-.dashboardDivs3 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    left: 1000px;
-    top: -8.8cm;
-}
-
-.caseTitle1 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 0.5cm;
-    top: 0.2cm;
-}
-
-.caseTitle2 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 0.3cm;
-    top: 0.25cm;
-}
-
-.caseTitle3 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 2cm;
-    top: 0.2cm;
-}
-
-.caseTitle4 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 1cm;
-    top: 0.2cm;
-}
-
-.caseTitle5 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 1.5cm;
-    top: 0.2cm;
-}
-
-.caseTitle6 {
-    position: relative;
-    color: rgb(165, 42, 42);
-    font: bold 18px helvetica;
-    left: 0.7cm;
-    top: 0.2cm;
-}
-
-.dataDisplay {
-    position: relative;
-    color: rgb(15, 15, 15);
-    left: 3cm;
-    font: bold 18px helvetica;
-    
-}
-
-#Chart {
-    background-color: rgba(250, 235, 215, 0.85);
-    border-radius: 10px;
-}
-    </style>
-
-    <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
-    <link rel="stylesheet" type="text/css" href="coronaStyle.css" />
-
-    <!-- 
-     <img src="https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/br.png" alt="" id="brFlag"
-        height="45" width="55">  -->
-
-    <h4 id="subtitulo2">Dados Coletados da API: <a id="APIRef"
-            href="https://corona.lmao.ninja/docs/#/Countries/get_v2_countries__query_">NOVELCovid</a></h4>
     <div id="headDiv">
         <p id="time"></p>
-        <h1 id="title1">Dados do Corona Vírus no Brasil <h4 id="subtitulo1">Esse site contem informacoes atualizadas,
+        <h1 id="title1">Dados do Corona Virus no Brasil <h4 id="subtitulo1">Esse site contem informacoes atualizadas,
                 constantemente, sobre o corona virus no Brasil</h4>
         </h1>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> // importing the Charts libr files </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> // importing the Charts libr files </script>
 </head>
 
 <body>
     <div id="chartDiv">
-    <canvas id="Chart" height="3cm" width="15cm" ></canvas>
-    <script src="script.js"> //js coding </script>
+        <canvas id="Chart" height="3cm" width="15cm"></canvas>
+        <script src="script.js"> //js coding </script>
     </div>
     <script>
 
@@ -230,57 +76,66 @@ body {
         function usingData(data) {
 
             let Corona = data;
-            console.log(Corona.data.spots);
 
             let coronaUpdates = Object.values(Corona.data.spots) //eu criei um array com os atributos que tem objetos dos dados atualizados e o array aumenta a cada 10 min 
-                let casosTotal = coronaUpdates[0].total_cases;
-                let mortesTotais = coronaUpdates[0].deaths;
-                let recuperados = coronaUpdates[0].recovered;
+            let casosTotal = coronaUpdates[0].total_cases;
+            let mortesTotais = coronaUpdates[0].deaths;
+            let recuperados = coronaUpdates[0].recovered;
             let casosAtivos = Corona.data.summary.active_cases;
-            
 
-            setInterval(function () { document.getElementById("totalcases").innerHTML = `${casosTotal}`}, 1000)
-            setInterval(function () { document.getElementById("activecases").innerHTML = `${casosAtivos}` }, 1000)
-            setInterval(function () { document.getElementById("casestoday").innerHTML = `${Corona.data.change.total_cases}` }, 1000)
-            setInterval(function () { document.getElementById("totaldeaths").innerHTML = `${mortesTotais}` }, 1000)
-            setInterval(function () { document.getElementById("todaydeaths").innerHTML = `${Corona.data.change.deaths}` }, 1000)
-            setInterval(function () { document.getElementById("recover").innerHTML = `${recuperados}` }, 1000)
+
+            document.getElementById("totalcases").innerHTML = `${casosTotal}`
+            document.getElementById("activecases").innerHTML = `${casosAtivos}`
+            document.getElementById("casestoday").innerHTML = `${Corona.data.change.total_cases}`
+            document.getElementById("totaldeaths").innerHTML = `${mortesTotais}`
+            document.getElementById("todaydeaths").innerHTML = `${Corona.data.change.deaths}`
+            document.getElementById("recover").innerHTML = `${recuperados}`
 
 
         }
+
+        setInterval(usingData, 2000);
+
     </script>
 
-    <div class="dashboardDivs1">
-        <h3 class="caseTitle1">Caso Totais Até o Instante:</h3>
-        <p id="totalcases" class='dataDisplay'></p>
-    </div>
+    <section id="datadisp">
+        <div class="dashboardDivs1">
+            <h3 class="caseTitle1">Caso Totais Ate o Instante:</h3>
+            <p id="totalcases" class='dataDisplay'></p>
+        </div>
 
-    <div class="dashboardDivs1">
-        <h3 class="caseTitle2">Caso Ativos Nesse Instante:</h3>
-        <p id="activecases" class='dataDisplay'></p>
-    </div>
+        <div class="dashboardDivs1">
+            <h3 class="caseTitle2">Caso Ativos Nesse Instante:</h3>
+            <p id="activecases" class='dataDisplay'></p>
+        </div>
 
-    <div class="dashboardDivs2">
-        <h3 class="caseTitle3">Caso de Hoje:</h3>
-        <p id="casestoday" class='dataDisplay'></p>
-    </div>
+        <div class="dashboardDivs2">
+            <h3 class="caseTitle3">Caso de Hoje:</h3>
+            <p id="casestoday" class='dataDisplay'></p>
+        </div>
 
-    <div class="dashboardDivs2">
-        <h3 class="caseTitle4">Total de Fatalidades:</h3>
-        <p id="totaldeaths" class='dataDisplay'></p>
-    </div>
+        <div class="dashboardDivs2">
+            <h3 class="caseTitle4">Total de Fatalidades:</h3>
+            <p id="totaldeaths" class='dataDisplay'></p>
+        </div>
 
-    <div class="dashboardDivs3">
-        <h3 class="caseTitle5">Fatalidades Hoje:</h3>
-        <p id="todaydeaths" class='dataDisplay'></p>
-    </div>
+        <div class="dashboardDivs3">
+            <h3 class="caseTitle5">Fatalidades Hoje:</h3>
+            <p id="todaydeaths" class='dataDisplay'></p>
+        </div>
 
-    <div class="dashboardDivs3">
-        <h3 class="caseTitle6">Recuperados da Doença:</h3>
-        <p id="recover" class='dataDisplay'></p>
-    </div>
-
-
+        <div class="dashboardDivs3">
+            <h3 class="caseTitle6">Recuperados da Doença:</h3>
+            <p id="recover" class='dataDisplay'></p>
+        </div>
+    </section>
 </body>
+
+<footer>
+    <p id="subtitulo2">Dados Coletados da API: <a id="APIRef"
+            href="https://corona.lmao.ninja/docs/#/Countries/get_v2_countries__query_">NOVELCovid</a></p>
+
+    <p id="author">Created by: Victoria Luquet</p>
+</footer>
 
 </html>
