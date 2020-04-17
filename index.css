@@ -1,0 +1,221 @@
+ /* Corona virus site styles */
+
+ body {
+    background-image: url("https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80");
+    background-position-x: 3cm;
+    background-position-y: 1cm;
+    width: 1000;
+
+}
+
+
+#headDiv {
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.726);
+    border: antiquewhite;
+    border-radius: 12px;
+    width: 20cm;
+    height: 3cm;
+    top: -0.005cm;
+    margin: auto;
+
+}
+
+#title1 {
+    text-align: center;
+    color: brown;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#subtitulo1 {
+    position: relative;
+    text-align: center;
+    color: darkslategray;
+    font-style: italic;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: -0.3cm;
+}
+
+#subtitulo2 {
+    position: relative;
+    color: rgb(245, 245, 245);
+    font-style: italic;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 0.5cm;
+}
+
+#APIRef:hover {
+    color: mediumpurple;
+}
+
+
+#time {
+    position: relative;
+    text-align: center;
+    color: darkslategray;
+    font: italic bold 15px helvetica;
+    top: 0.6cm;
+}
+
+/*Editing the Data dashboard*/
+
+.dashboardDivs1 {
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.726);
+    border: antiquewhite;
+    border-radius: 12px;
+    width: 7cm;
+    height: 2cm;
+    top: 1cm;
+    left: -12cm;
+    margin: auto;
+}
+
+.dashboardDivs2 {
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.726);
+    border: rgb(207, 66, 41);
+    border-radius: 12px;
+    width: 7cm;
+    height: 2cm;
+    top: -4cm;
+    margin: auto;
+}
+
+.dashboardDivs3 {
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.726);
+    border: antiquewhite;
+    border-radius: 12px;
+    width: 7cm;
+    height: 2cm;
+    top: -9cm;
+    margin: auto;
+    left: 12cm;
+}
+
+#datadisp {
+    margin: auto;
+    height: 6cm;
+}
+
+.caseTitle1 {
+    position: relative;
+    color: brown;
+    font: bold 18px helvetica;
+    left: 0.5cm;
+    top: 0.2cm;
+}
+
+.caseTitle2 {
+    position: relative;
+    color: brown;
+    font: bold 18px helvetica;
+    left: 0.3cm;
+    top: 0.25cm;
+}
+
+.caseTitle3 {
+    position: relative;
+    color: brown;
+    font: bold 18px helvetica;
+    left: 2cm;
+    top: 0.2cm;
+}
+
+.caseTitle4 {
+    position: relative;
+    color: brown;
+    font: bold 18px helvetica;
+    left: 1cm;
+    top: 0.2cm;
+}
+
+.caseTitle5 {
+    position: relative;
+    color: brown;
+    font: bold 18px helvetica;
+    left: 1.5cm;
+    top: 0.2cm;
+}
+
+.caseTitle6 {
+    position: relative;
+    color: rgb(165, 42, 42);
+    font: bold 18px helvetica;
+    left: 0.7cm;
+    top: 0.2cm;
+}
+
+.dataDisplay {
+    position: relative;
+    color: rgb(15, 15, 15);
+    left: 3cm;
+    font: bold 18px helvetica;
+
+}
+
+#Chart {
+    background-color: rgba(250, 235, 215, 0.85);
+    border-radius: 10px;
+    top: 4cm;
+}
+
+#chartDiv {
+    top: 4cm;
+    margin-top: 1cm;
+    margin-bottom: 0cm;
+}
+
+#author {
+    position: relative;
+    color: rgb(245, 245, 245);
+    font-style: italic;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 0.5cm;
+}
+
+#navMundo {
+    position: relative;
+    color: aliceblue;
+    font: bold 18px monospace;
+    left: 0.4cm;
+
+}
+
+#navMundo:hover {
+    position: relative;
+    color: rgb(114, 116, 119);
+    font: bold 18px monospace;
+}
+
+#navBrasil {
+    position: relative;
+    color: aliceblue;
+    font: bold 18px monospace;
+    left: 0.3cm;
+    margin: auto;
+
+}
+
+#navBrasil:hover {
+    position: relative;
+    color: rgb(114, 116, 119);
+    font: bold 18px monospace;
+
+}
+
+
+.navdiv {
+    position: relative;
+    background-color: rgba(165, 42, 42, 0.884);
+    display: inline-block;
+    left: 18cm;
+    height: 25px;
+    width: 85px;
+    border-radius: 12px;
+    margin: auto;
+}
