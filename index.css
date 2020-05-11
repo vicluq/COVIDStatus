@@ -1,221 +1,252 @@
- /* Corona virus site styles */
+/* Corona virus site styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
- body {
-    background-image: url("https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80");
-    background-position-x: 3cm;
-    background-position-y: 1cm;
-    width: 1000;
-
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed";
 }
 
-
-#headDiv {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 20cm;
-    height: 3cm;
-    top: -0.005cm;
-    margin: auto;
-
+html {
+  width: 100%;
+  height: 100%vh;
+  box-sizing: border-box;
 }
 
-#title1 {
-    text-align: center;
-    color: brown;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    -225deg,
+    #b7f8db 0%,
+    rgb(117, 190, 212) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-#subtitulo1 {
-    position: relative;
-    text-align: center;
-    color: darkslategray;
-    font-style: italic;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: -0.3cm;
+/* Data Display */
+
+.datadisp {
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-#subtitulo2 {
-    position: relative;
-    color: rgb(245, 245, 245);
-    font-style: italic;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: 0.5cm;
+.dashboards {
+  box-sizing: border-box;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #ebedf1 0%, #eef1f5 100%);
+  box-shadow: 2px 2px 2px 2px #32333326;
+  border-bottom: 5px solid skyblue;
+  font-size: 28px;
 }
 
-#APIRef:hover {
-    color: mediumpurple;
+.dashboards:hover {
+  background-image: linear-gradient(to top, #e1e6eb 0%, #e6eaf3 100%);
+  box-shadow: 0;
 }
 
-
-#time {
-    position: relative;
-    text-align: center;
-    color: darkslategray;
-    font: italic bold 15px helvetica;
-    top: 0.6cm;
+.dashboards:hover h3 {
+  color: #53e4da;
+  border-bottom: 3px solid #53e4da;
+  border-top: 3px solid #53e4da;
 }
 
-/*Editing the Data dashboard*/
-
-.dashboardDivs1 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    top: 1cm;
-    left: -12cm;
-    margin: auto;
+.dashboards:hover p {
+  color: #4fff67;
+  border-radius: 5px;
+  padding: 5px;
+  border: 3px solid #4fff67;
 }
 
-.dashboardDivs2 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: rgb(207, 66, 41);
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    top: -4cm;
-    margin: auto;
+.dashboards h3 {
+  color: #68c8c2;
+  border-bottom: 3px solid #68c8c2;
+  border-top: 3px solid #68c8c2;
+  padding: 4px;
 }
 
-.dashboardDivs3 {
-    position: relative;
-    background-color: rgba(250, 235, 215, 0.726);
-    border: antiquewhite;
-    border-radius: 12px;
-    width: 7cm;
-    height: 2cm;
-    top: -9cm;
-    margin: auto;
-    left: 12cm;
+.dashboards p {
+  color: #88f196;
+  font-weight: 600;
 }
 
-#datadisp {
-    margin: auto;
-    height: 6cm;
-}
+/* Chart.Js */
 
-.caseTitle1 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 0.5cm;
-    top: 0.2cm;
-}
-
-.caseTitle2 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 0.3cm;
-    top: 0.25cm;
-}
-
-.caseTitle3 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 2cm;
-    top: 0.2cm;
-}
-
-.caseTitle4 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 1cm;
-    top: 0.2cm;
-}
-
-.caseTitle5 {
-    position: relative;
-    color: brown;
-    font: bold 18px helvetica;
-    left: 1.5cm;
-    top: 0.2cm;
-}
-
-.caseTitle6 {
-    position: relative;
-    color: rgb(165, 42, 42);
-    font: bold 18px helvetica;
-    left: 0.7cm;
-    top: 0.2cm;
-}
-
-.dataDisplay {
-    position: relative;
-    color: rgb(15, 15, 15);
-    left: 3cm;
-    font: bold 18px helvetica;
-
+#chartDiv {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  width: 1600px;
+  height: 400px;
+  padding: 30px 0;
 }
 
 #Chart {
-    background-color: rgba(250, 235, 215, 0.85);
-    border-radius: 10px;
-    top: 4cm;
-}
-
-#chartDiv {
-    top: 4cm;
-    margin-top: 1cm;
-    margin-bottom: 0cm;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 2px 2px 2px 2px #32333326;
+  border-bottom: 5px solid skyblue;
 }
 
 #author {
-    position: relative;
-    color: rgb(245, 245, 245);
-    font-style: italic;
+  position: relative;
+  color: rgb(245, 245, 245);
+  font-style: italic;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  top: 0.5cm;
+}
+
+/* Header */
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  color: rgb(83, 95, 102);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.137);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #country {
+  width: 300px;
+  font-size: 24px;
+}
+
+header #titleDiv {
+  flex-basis: 5%;
+  flex-grow: 1;
+  max-height: 50px;
+  overflow-y: scroll;
+  /* overflow-x: scroll; */
+}
+
+header #titleDiv::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+header #titleDiv::-webkit-scrollbar-track {
+
+}
+
+header #titleDiv::-webkit-scrollbar-thumb {
+  background: #68c8c2;
+}
+
+header h1 {
+  color: #68c8c2;
+  margin: 0 0 0 20px;
+}
+
+header h1 span {
+  color: #ffb404;
+}
+
+header #time {
+  margin: 0 20px 0 0;
+  font-weight: 400;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+@media (max-width: 1200px) {
+  header #time {
+    display: none;
+  }
+
+  header h1 {
+    overflow: hidden;
+  }
+
+  header #country {
+    justify-content: center;
+  }
+
+  .dashboards {
+    flex-basis: 350px;
+    height: 180px;
+    margin: 0 10px;
+  }
+
+  .dashboards p {
+    font-size: 24px;
+  }
+
+  .dashboards h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboards {
+    flex-basis: 250px;
+    height: 130px;
+    margin: 0 5px;
+  }
+
+  .dashboards p {
+    font-size: 18px;
+  }
+
+  .dashboards h3 {
     font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    top: 0.5cm;
+  }
 }
 
-#navMundo {
-    position: relative;
-    color: aliceblue;
-    font: bold 18px monospace;
-    left: 0.4cm;
+/* Footer */
 
+footer {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.137);
+  width: 100%;
+  max-height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#navMundo:hover {
-    position: relative;
-    color: rgb(114, 116, 119);
-    font: bold 18px monospace;
+footer p {
+  margin-left: 20px;
+  color: #68c8c2;
+  font-weight: bold;
 }
 
-#navBrasil {
-    position: relative;
-    color: aliceblue;
-    font: bold 18px monospace;
-    left: 0.3cm;
-    margin: auto;
-
+#APIRef {
+  color: #06b8ff;
 }
 
-#navBrasil:hover {
-    position: relative;
-    color: rgb(114, 116, 119);
-    font: bold 18px monospace;
-
+#APIRef:hover {
+  color: rgb(0, 217, 255);
 }
 
 
-.navdiv {
-    position: relative;
-    background-color: rgba(165, 42, 42, 0.884);
-    display: inline-block;
-    left: 18cm;
-    height: 25px;
-    width: 85px;
-    border-radius: 12px;
-    margin: auto;
+/* Select */
+
+select {
+  border: 2px solid #68c8c2;
+  color: #68c8c2;
+  font-weight: 600;
 }
