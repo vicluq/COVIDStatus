@@ -214,6 +214,14 @@ header #time {
   .dashboards h3 {
     font-size: 12px;
   }
+  
+  #chartDiv {
+    width: 500px;
+  }
+
+  #Chart {
+    width: 500px;
+  }
 }
 
 /* Footer */
