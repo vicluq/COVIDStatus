@@ -3,33 +3,52 @@
 <html lang="pt-BR">
 <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
 
-<header>
-    <nav>
-        <div class="navdiv"><a id="navBrasil" href=" index.html">Brasil</a></div>
-        <div class="navdiv"><a id="navMundo" href="Mundo.html">Mundo</a></div>
-    </nav>
-</header>
 
 <head>
     <link rel="shortcut icon" type:"image/png" href="https://img.icons8.com/color/48/000000/bacteria.png">
     <link rel="stylesheet" type="text/css" href="index.css" />
 
 
-    <div id="headDiv">
-        <p id="time"></p>
-        <h1 id="title1">Dados do Corona Virus no Brasil <h4 id="subtitulo1">Esse site contem informacoes atualizadas,
-                constantemente, sobre o corona virus no Brasil</h4>
-        </h1>
-
-    </div>
 
     <script
         src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"> // importing the Charts libr files </script>
 </head>
 
 <body>
+
+    <header>
+        <div id="titleDiv">
+        <h1 id="title1">Dados do Corona Vírus - <span></span></h1>
+        </div>
+        <select name="country" id="country">
+            <option disabled selected value="#">selecione o país...</option>
+            <option value="https://corona.lmao.ninja/v2/all?yesterday=true">Mundo</option>
+            <option value="south africa">África do Sul</option>
+            <option value="australia">Austrália</option>
+            <option value="belgium">Bélgica</option>
+            <option value="brazil">Brasil</option>
+            <option value="canada">Canadá</option>
+            <option value="china">China</option>
+            <option value="colombia">Colombia</option>
+            <option value="spain">Espanha</option>
+            <option value="us">Estados Unidos</option>
+            <option value="finland">Filândia</option>
+            <option value="france">França</option>
+            <option value="greenland">Groelândia</option>
+            <option value="india">Índia</option>
+            <option value="uk">Inglaterra</option>
+            <option value="italy">Itália</option>
+            <option value="norway">Noruega</option>
+            <option value="sweden">Suécia</option>
+            <option value="switzerland">Suíça</option>
+        </select>
+        <h3 id="time"></h3>
+
+    </header>
+
+    <!-- Chart -->
     <div id="chartDiv">
-        <canvas id="Chart" height="3cm" width="15cm"></canvas>
+        <canvas id="Chart" height="2cm" width="10cm"></canvas>
         <script src="script.js"> //js coding </script>
     </div>
     <script>
@@ -52,90 +71,48 @@
             }, 1000)
         }
 
-
-        //API DATA REQUEST AND FETCH
-        let coronaStats =
-            "https://api.quarantine.country/api/v1/summary/region?region=brazil";
-
-        fetch(coronaStats)
-
-            .then(function (response) {
-                return response.json();
-            })
-
-            .then(function (data) {
-                console.log(data);
-
-                let CoronaData = data;
-                usingData(CoronaData);
-            })
-
-            .catch((erro) => console.log("could not proceed: ", erro));
-
-
-        function usingData(data) {
-
-            let Corona = data;
-
-            let coronaUpdates = Object.values(Corona.data.spots) //eu criei um array com os atributos que tem objetos dos dados atualizados e o array aumenta a cada 10 min 
-            let casosTotal = coronaUpdates[0].total_cases;
-            let mortesTotais = coronaUpdates[0].deaths;
-            let recuperados = coronaUpdates[0].recovered;
-            let casosAtivos = Corona.data.summary.active_cases;
-
-
-            document.getElementById("totalcases").innerHTML = `${casosTotal}`
-            document.getElementById("activecases").innerHTML = `${casosAtivos}`
-            document.getElementById("casestoday").innerHTML = `${Corona.data.change.total_cases}`
-            document.getElementById("totaldeaths").innerHTML = `${mortesTotais}`
-            document.getElementById("todaydeaths").innerHTML = `${Corona.data.change.deaths}`
-            document.getElementById("recover").innerHTML = `${recuperados}`
-
-
-        }
-
-        setInterval(usingData, 2000);
-
     </script>
 
-    <section id="datadisp">
-        <div class="dashboardDivs1">
-            <h3 class="caseTitle1">Caso Totais Ate o Instante:</h3>
+    <div class="datadisp">
+        <div dash class="dashboards">
+            <h3 class="caseTitle1">Caso Totais Até o Instante:</h3>
             <p id="totalcases" class='dataDisplay'></p>
         </div>
 
-        <div class="dashboardDivs1">
+        <div dash class="dashboards">
             <h3 class="caseTitle2">Caso Ativos Nesse Instante:</h3>
             <p id="activecases" class='dataDisplay'></p>
         </div>
 
-        <div class="dashboardDivs2">
+        <div dash class="dashboards">
             <h3 class="caseTitle3">Caso de Hoje:</h3>
             <p id="casestoday" class='dataDisplay'></p>
         </div>
+    </div>
 
-        <div class="dashboardDivs2">
+    <class class="datadisp">
+        <div dash class="dashboards">
             <h3 class="caseTitle4">Total de Fatalidades:</h3>
             <p id="totaldeaths" class='dataDisplay'></p>
         </div>
 
-        <div class="dashboardDivs3">
+        <div dash class="dashboards">
             <h3 class="caseTitle5">Fatalidades Hoje:</h3>
             <p id="todaydeaths" class='dataDisplay'></p>
         </div>
 
-        <div class="dashboardDivs3">
+        <div dash class="dashboards">
             <h3 class="caseTitle6">Recuperados da Doença:</h3>
             <p id="recover" class='dataDisplay'></p>
         </div>
-    </section>
+    </class>
+
+    <footer>
+        <p id="subtitulo2">Dados Coletados da API: <a id="APIRef"
+                href="https://corona.lmao.ninja/docs/#/Countries/get_v2_countries__query_">NOVELCovid</a>. Created by:
+            Victoria Luquet</p>
+    </footer>
 </body>
 
-<footer>
-    <p id="subtitulo2">Dados Coletados da API: <a id="APIRef"
-            href="https://corona.lmao.ninja/docs/#/Countries/get_v2_countries__query_">NOVELCovid</a></p>
-
-    <p id="author">Created by: Victoria Luquet</p>
-</footer>
 
 </html>
