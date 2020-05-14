@@ -211,7 +211,7 @@ header #time {
   }
 
   
-  header #country {
+  header select{
     max-width: 100px;
     flex-grow: 0;
   }
