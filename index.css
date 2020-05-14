@@ -201,7 +201,22 @@ header #time {
 }
 
 @media (max-width: 600px) {
-  .dashboards {
+  header {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  
+  header #country {
+    max-width: 100px;
+    flex-grow: 0;
+  }
+
+ .dashboards {
     flex-basis: 250px;
     height: 130px;
     margin: 0 5px;
