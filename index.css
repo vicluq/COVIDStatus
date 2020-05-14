@@ -207,14 +207,14 @@ header #time {
 
   header h1 {
     overflow: hidden;
-    font-size: 0.7em;
+    font-size: 1em;
     flex-grow: 1;
   }
 
   
   header select{
     max-width: 120px;
-    font-size: 0.7em;
+    font-size: 1em;
     flex-grow: 0;
   }
 
