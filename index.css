@@ -216,11 +216,13 @@ header #time {
   }
   
   #chartDiv {
-    width: 300px;
+    display: none;
   }
 
-  #Chart {
-    width: 300px;
+  footer {
+    font-size: 0.5em;
+    width: 100%;
+    height: 60px;
   }
 }
 
