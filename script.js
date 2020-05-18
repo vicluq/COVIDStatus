@@ -25,7 +25,6 @@ countrySelect.onchange = function ()
         })
 
         .then(function (data) {
-          console.log(data)
             let CoronaData = data;
             usingData(CoronaData);
         })
@@ -40,7 +39,6 @@ countrySelect.onchange = function ()
       .then(function (response3) {
           return response3.json()
       }).then (function (data3) {
-          console.log(data3)
           buildChart(data3)
       
       
